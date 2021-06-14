@@ -1,69 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35433" started-at="2021-06-14T10:39:13 CEST" finished-at="2021-06-14T10:39:49 CEST">
+  <suite name="Default suite" duration-ms="3293" started-at="2021-06-15T01:00:11 CEST" finished-at="2021-06-15T01:00:14 CEST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="35433" started-at="2021-06-14T10:39:13 CEST" finished-at="2021-06-14T10:39:49 CEST">
-      <class name="tests.LogInTests">
-        <test-method status="PASS" signature="beforeAllTests()[pri:0, instance:tests.LogInTests@fad74ee]" name="beforeAllTests" is-config="true" duration-ms="2611" started-at="2021-06-14T10:39:13 CEST" finished-at="2021-06-14T10:39:16 CEST">
+    <test name="Default test" duration-ms="3293" started-at="2021-06-15T01:00:11 CEST" finished-at="2021-06-15T01:00:14 CEST">
+      <class name="tests.CreateAccountTest">
+        <test-method status="PASS" signature="beforeAllTests()[pri:0, instance:tests.CreateAccountTest@fad74ee]" name="beforeAllTests" is-config="true" duration-ms="3104" started-at="2021-06-15T01:00:11 CEST" finished-at="2021-06-15T01:00:14 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeAllTests -->
-        <test-method status="PASS" signature="beforeEveryTest()[pri:0, instance:tests.LogInTests@fad74ee]" name="beforeEveryTest" is-config="true" duration-ms="3462" started-at="2021-06-14T10:39:16 CEST" finished-at="2021-06-14T10:39:19 CEST">
+        <test-method status="FAIL" signature="sigUpToMyAccount(java.lang.String)[pri:0, instance:tests.CreateAccountTest@fad74ee]" name="sigUpToMyAccount" duration-ms="0" started-at="2021-06-15T01:00:14 CEST" finished-at="2021-06-15T01:00:14 CEST">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Cannot inject @Test annotated Method [sigUpToMyAccount] with [class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [sigUpToMyAccount] with [class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:439)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:353)
+at org.testng.internal.Parameters.createParameters(Parameters.java:708)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:884)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeEveryTest -->
-        <test-method status="PASS" signature="logInWithValidCredentials()[pri:0, instance:tests.LogInTests@fad74ee]" name="logInWithValidCredentials" duration-ms="4290" started-at="2021-06-14T10:39:19 CEST" finished-at="2021-06-14T10:39:23 CEST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logInWithValidCredentials -->
-        <test-method status="PASS" signature="nakonSvakogTesta()[pri:0, instance:tests.LogInTests@fad74ee]" name="nakonSvakogTesta" is-config="true" duration-ms="1979" started-at="2021-06-14T10:39:23 CEST" finished-at="2021-06-14T10:39:25 CEST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- nakonSvakogTesta -->
-        <test-method status="PASS" signature="beforeEveryTest()[pri:0, instance:tests.LogInTests@fad74ee]" name="beforeEveryTest" is-config="true" duration-ms="2348" started-at="2021-06-14T10:39:25 CEST" finished-at="2021-06-14T10:39:28 CEST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeEveryTest -->
-        <test-method status="PASS" signature="logInWrongCredentials()[pri:5, instance:tests.LogInTests@fad74ee]" name="logInWrongCredentials" duration-ms="3268" started-at="2021-06-14T10:39:28 CEST" finished-at="2021-06-14T10:39:31 CEST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logInWrongCredentials -->
-        <test-method status="PASS" signature="nakonSvakogTesta()[pri:0, instance:tests.LogInTests@fad74ee]" name="nakonSvakogTesta" is-config="true" duration-ms="955" started-at="2021-06-14T10:39:31 CEST" finished-at="2021-06-14T10:39:32 CEST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- nakonSvakogTesta -->
-        <test-method status="PASS" signature="beforeEveryTest()[pri:0, instance:tests.LogInTests@fad74ee]" name="beforeEveryTest" is-config="true" duration-ms="1656" started-at="2021-06-14T10:39:32 CEST" finished-at="2021-06-14T10:39:34 CEST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeEveryTest -->
-        <test-method status="PASS" signature="logInEmptyCredentials()[pri:10, instance:tests.LogInTests@fad74ee]" name="logInEmptyCredentials" duration-ms="3939" started-at="2021-06-14T10:39:34 CEST" finished-at="2021-06-14T10:39:38 CEST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logInEmptyCredentials -->
-        <test-method status="PASS" signature="nakonSvakogTesta()[pri:0, instance:tests.LogInTests@fad74ee]" name="nakonSvakogTesta" is-config="true" duration-ms="757" started-at="2021-06-14T10:39:38 CEST" finished-at="2021-06-14T10:39:38 CEST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- nakonSvakogTesta -->
-        <test-method status="PASS" signature="beforeEveryTest()[pri:0, instance:tests.LogInTests@fad74ee]" name="beforeEveryTest" is-config="true" duration-ms="1089" started-at="2021-06-14T10:39:38 CEST" finished-at="2021-06-14T10:39:39 CEST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeEveryTest -->
-        <test-method status="PASS" signature="logOut()[pri:15, instance:tests.LogInTests@fad74ee]" name="logOut" duration-ms="7569" started-at="2021-06-14T10:39:39 CEST" finished-at="2021-06-14T10:39:47 CEST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logOut -->
-        <test-method status="PASS" signature="nakonSvakogTesta()[pri:0, instance:tests.LogInTests@fad74ee]" name="nakonSvakogTesta" is-config="true" duration-ms="1321" started-at="2021-06-14T10:39:47 CEST" finished-at="2021-06-14T10:39:48 CEST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- nakonSvakogTesta -->
-        <test-method status="PASS" signature="aferAllTests()[pri:0, instance:tests.LogInTests@fad74ee]" name="aferAllTests" is-config="true" duration-ms="144" started-at="2021-06-14T10:39:48 CEST" finished-at="2021-06-14T10:39:49 CEST">
+        </test-method> <!-- sigUpToMyAccount -->
+        <test-method status="PASS" signature="aferAllTests()[pri:0, instance:tests.CreateAccountTest@fad74ee]" name="aferAllTests" is-config="true" duration-ms="135" started-at="2021-06-15T01:00:14 CEST" finished-at="2021-06-15T01:00:14 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aferAllTests -->
-      </class> <!-- tests.LogInTests -->
+      </class> <!-- tests.CreateAccountTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

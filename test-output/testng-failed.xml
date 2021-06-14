@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.LogInTests">
+      <class name="tests.CreateAccountTest">
         <methods>
-          <include name="beforeEveryTest"/>
           <include name="nakonSvakogTesta"/>
-          <include name="logOut"/>
+          <include name="beforeEveryTest"/>
           <include name="aferAllTests"/>
+          <include name="sigUpToMyAccount"/>
           <include name="beforeAllTests"/>
         </methods>
-      </class> <!-- tests.LogInTests -->
+      </class> <!-- tests.CreateAccountTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -8,6 +8,11 @@ public class MainNavigation {
 	
 	WebDriver driver;
 	WebElement SignInTab;
+	WebElement myAccountPageTab;
+	WebElement createAccountPageTab;
+	WebElement myAccountTab;
+	WebElement MyAddressPage;
+	WebElement YourAddresses;
 	
 	public MainNavigation(WebDriver driver) {
 		super();
@@ -15,12 +20,33 @@ public class MainNavigation {
 	}
 
 	public WebElement getSignInTab() {
-		return driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a"));
+		return driver.findElement(By.id("header"));
 	}
-	public void  SignInTabClick() {
+	public void SignInTabClick() {
 		this.getSignInTab().click();
 	}
+	public WebElement getMyAccountPageTab () {
+	return driver.findElement(By.id("create-account_form"));
+	}
+	
+	public WebElement getCreateAccountPageTab () {
+		return driver.findElement(By.id("noSlide"));
+	
+	}
+
+	public WebElement getMyAccountTab() {
+		return driver.findElement(By.id("center_column"));
+	}
+
+	public WebElement getMyAddressPage() {
+		return driver.findElement(By.id("columns"));
+	}
+
+	public WebElement getYourAddresses() {
+		return driver.findElement(By.id("columns"));
 
 	
 	
 }
+}	
+
