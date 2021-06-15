@@ -25,7 +25,7 @@ public class SignIn {
 		return driver.findElement(By.xpath("//*[@id=\"passwd\"]"));
 	}
 	public WebElement getSignInButton() {
-		return driver.findElement(By.id("SubmitLogin"));
+		return driver.findElement(By.id("header"));
 	}
 	
 	public WebElement getSignOutButton() {

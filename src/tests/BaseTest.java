@@ -10,19 +10,28 @@ import org.testng.annotations.BeforeClass;
 
 import pages.CreateAccountPage;
 import pages.MainNavigation;
+import pages.MyAccount;
 import pages.MyAccountPage;
+import pages.MyAddressPage;
 import pages.SignIn;
+import pages.YourAddresses;
+import pages.YourPersonalInformation;
+import pages.myWishListpage;
 
 public class BaseTest {
 	
 	WebDriver driver;
 	MainNavigation mainNavigation;
 	SignIn signIn;
-	CreateAccountPage createAccountPage;
-	MyAccountPage myAccountPage;
 	ExcelReader citacIzExcela;
 	String homeUrl;
-
+	YourAddresses YourAddresses;
+	MyAccount myAccount;
+	MyAddressPage myAddressPage;
+	MyAccountPage myAccountPage;
+	CreateAccountPage createAccountPage;
+	YourPersonalInformation yourPersonalInformation;
+	myWishListpage myWishListPage;
 	@BeforeClass
 	
 	public void beforeAllTests() throws IOException  {
@@ -34,6 +43,11 @@ public class BaseTest {
 		createAccountPage=new CreateAccountPage(driver);
 		myAccountPage=new MyAccountPage(driver);
 		signIn= new SignIn(driver);
+		myAddressPage=new MyAddressPage(driver);
+		myAccount=new MyAccount(driver);
+		YourAddresses=new YourAddresses(driver);
+		yourPersonalInformation=new YourPersonalInformation(driver);
+		myWishListPage=new myWishListpage(driver);
 		citacIzExcela =  new ExcelReader("data\\AutomationPlan.xlsx");
 		homeUrl = "http://automationpractice.com/index.php";
 	}

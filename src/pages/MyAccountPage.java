@@ -23,9 +23,11 @@ public class MyAccountPage {
 		WebElement lastNameYourAddress;
 		WebElement address;
 		WebElement city;
+		Select SelectState;
 		WebElement stateDropDownMenu;
 		WebElement zipPostalCode;
 		WebElement mobilePhoneNumber;
+		WebElement AddressTitle;
 		WebElement RegisterButton;
 		
 		public MyAccountPage(WebDriver driver) {
@@ -89,7 +91,10 @@ public class MyAccountPage {
 		public WebElement getCity() {
 			return driver.findElement(By.id("city"));
 		}
-
+		public Select getState() {
+			SelectState= new Select (driver.findElement(By.id("id_state")));
+			return SelectState;
+		}
 		public WebElement getStateDropDownMenu() {
 			return driver.findElement(By.id("id_state"));
 		}
@@ -101,6 +106,12 @@ public class MyAccountPage {
 
 		public WebElement getMobilePhoneNumber() {
 			return driver.findElement(By.id("phone_mobile"));
+		}
+		
+		
+
+		public WebElement getAddressTitle() {
+			return driver.findElement(By.xpath("alias"));
 		}
 
 		public WebElement getRegisterButton() {
@@ -123,8 +134,8 @@ public class MyAccountPage {
 		public void insertPassword(String password) {
 			this.getPassword().sendKeys(password);
 	}
-		public void selectDateOfBirth(String day) {
-			this.SelectDateOfBirth().selectByVisibleText(day);
+		public void selectDateOfBirth(int day) {
+			this.SelectDateOfBirth().selectByIndex(day);
 		}
 		public void selectMonthOfBirth(String month) {
 			this.getSelectMonthOfBirth().selectByVisibleText(month);
@@ -160,6 +171,10 @@ public class MyAccountPage {
 		public void insertMobilePhoneNumber(String MobilePhoneNumber) {
 			this.getMobilePhoneNumber().sendKeys(MobilePhoneNumber);
 	}
+		
+		public void insertAddressTitle() {
+			this.getAddressTitle().sendKeys();
+		}
 		public void registerButtonClick() {
 			this.getRegisterButton().click();
 		}

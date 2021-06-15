@@ -17,7 +17,7 @@ public class CreateAccountTest extends BaseTest {
 	
 }
 	@Test
-	public void sigUpToMyAccount(String SelectDateOfBirth) throws InterruptedException {
+	public void sigUpToMyAccount(int SelectDateOfBirth) throws InterruptedException {
 		mainNavigation.SignInTabClick();
 		String emailAddress = citacIzExcela.getStringData("MyAccountTest", 6, 2);
 		System.out.println(emailAddress);

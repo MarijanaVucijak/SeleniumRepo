@@ -13,6 +13,7 @@ public class MainNavigation {
 	WebElement myAccountTab;
 	WebElement MyAddressPage;
 	WebElement YourAddresses;
+	WebElement myWishListPage;
 	
 	public MainNavigation(WebDriver driver) {
 		super();
@@ -45,8 +46,11 @@ public class MainNavigation {
 	public WebElement getYourAddresses() {
 		return driver.findElement(By.id("columns"));
 
+	}
+
+	public WebElement getMyWishListPage() {
+		return driver.findElement(By.id("center_column"));
+	}
 	
-	
-}
 }	
 

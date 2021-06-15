@@ -3,15 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.CreateAccountTest">
+      <class name="tests.MyWishListTest">
         <methods>
+          <include name="deleteWishList"/>
           <include name="nakonSvakogTesta"/>
           <include name="beforeEveryTest"/>
+          <include name="addWishList"/>
+          <include name="addMultipleWishList"/>
           <include name="aferAllTests"/>
-          <include name="sigUpToMyAccount"/>
           <include name="beforeAllTests"/>
         </methods>
-      </class> <!-- tests.CreateAccountTest -->
+      </class> <!-- tests.MyWishListTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
