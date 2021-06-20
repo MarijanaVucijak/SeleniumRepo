@@ -25,7 +25,7 @@ public class SignIn {
 		return driver.findElement(By.xpath("//*[@id=\"passwd\"]"));
 	}
 	public WebElement getSignInButton() {
-		return driver.findElement(By.id("header"));
+		return driver.findElement(By.id("SubmitLogin"));
 	}
 	
 	public WebElement getSignOutButton() {
@@ -44,7 +44,7 @@ public class SignIn {
 		this.getPasswordInput().sendKeys(passwordInput);
 	}
 	
-	public void signInButtonClick(SignIn signIn) {
+	public void signInButtonClick() {
 		this.getSignInButton().click();
 	}
 	public String textFromSignInButton() {
@@ -71,6 +71,10 @@ public class SignIn {
 
 		 System.out.println("poruka "+getErrorMessage().getText());
 		return getErrorMessage().getText()  ;
+	}
+	public void signInButtonClick(SignIn signIn) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

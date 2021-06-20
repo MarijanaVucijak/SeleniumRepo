@@ -21,7 +21,7 @@ public class MainNavigation {
 	}
 
 	public WebElement getSignInTab() {
-		return driver.findElement(By.id("header"));
+		return driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]"));
 	}
 	public void SignInTabClick() {
 		this.getSignInTab().click();

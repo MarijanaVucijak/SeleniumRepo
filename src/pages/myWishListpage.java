@@ -9,7 +9,7 @@ public class myWishListpage {
 	
 	WebDriver driver;
 	WebElement name;
-	WebElement printedChiffonDress;
+	WebElement name1;
 	WebElement Blouse;
 	WebElement save;
 	WebElement addToWishList;
@@ -26,35 +26,38 @@ public class myWishListpage {
 		return driver.findElement(By.id("name"));
 	}
 
-	public WebElement getPrintedChiffonDress() {
-		return driver.findElement(By.id("best-sellers_block_right"));
-	}
-
 	public WebElement getBlouse() {
-		return driver.findElement(By.id("best-sellers_block_right"));
+		return driver.findElement(By.xpath("//*[@id=\"best-sellers_block_right\"]/div/ul/li[3]/div/h5/a"));
 	}
 
 	public WebElement getSave() {
-		return driver.findElement(By.id("best-sellers_block_right")) ;
+		return driver.findElement(By.id("submitWishlist")) ;
 	}
 	public WebElement getAddToWishList() {
 		return driver.findElement(By.id("wishlist_button"));
 	}
 	
 	public WebElement getPopUpClose() {
-		return driver.findElement(By.id("product"));
+		return driver.findElement(By.xpath("//*[@id=\"product\"]/div[2]/div/div/a")); 
 	}
 
 	public WebElement getPopUpButton() {
-		return driver.findElement(By.id("product"));
+		return driver.findElement(By.xpath("//*[@id=\"product\"]/div[2]/div/div/div/div/p"));
 	}
 	
 	public WebElement getDeleteWishList() {
-		return driver.findElement(By.id("wishlist_35356"));
+		return driver.findElement(By.className("icon-remove"));
+	}  
+	public WebElement getName1() {
+		return driver.findElement(By.name("name"));
 	}
 
-	public void insertName () {
-		this.getName().sendKeys();
+	
+	public void insertName (String name) {
+		this.getName().sendKeys(name);
+	}
+	public void insertName1 (String name1) {
+		this.getName1().sendKeys(name1);
 	}
 	public void saveClick () {
 		this.getSave().click();

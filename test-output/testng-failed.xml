@@ -5,10 +5,8 @@
     <classes>
       <class name="tests.MyWishListTest">
         <methods>
-          <include name="deleteWishList"/>
           <include name="nakonSvakogTesta"/>
           <include name="beforeEveryTest"/>
-          <include name="addWishList"/>
           <include name="addMultipleWishList"/>
           <include name="aferAllTests"/>
           <include name="beforeAllTests"/>

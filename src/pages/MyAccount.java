@@ -16,16 +16,15 @@ public class MyAccount {
 		this.driver = driver;
 	}
 	public WebElement getMyAddressesButton() {
-		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/div[1]/ul/li[3]/a/span"));
+		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/div[1]/ul/li[3]/a"));
 	}
 	
 	public WebElement getMyPersonalInformation() {
-		return driver.findElement(By.xpath("center_column"));
+		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/div[1]/ul/li[4]/a"));
 	}
 	
-	
 	public WebElement getMyWishList() {
-		return driver.findElement(By.id("center_column"));
+		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/div[2]/ul/li/a/span"));
 	}
 	public void myAddressesButtonClick() {
 		this.getMyAddressesButton().click();
@@ -33,7 +32,7 @@ public class MyAccount {
 	public void myPersonalInformationClick() {
 		this.getMyPersonalInformation().click();
 	}
-	public void myWishListClick() {
+	public void myWishList() {
 		this.getMyWishList().click();
 	}
 }

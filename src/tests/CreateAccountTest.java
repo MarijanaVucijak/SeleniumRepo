@@ -1,6 +1,9 @@
 package tests;
 
 
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -17,10 +20,9 @@ public class CreateAccountTest extends BaseTest {
 	
 }
 	@Test
-	public void sigUpToMyAccount(int SelectDateOfBirth) throws InterruptedException {
+	public void sigUpToMyAccount() throws InterruptedException {
 		mainNavigation.SignInTabClick();
 		String emailAddress = citacIzExcela.getStringData("MyAccountTest", 6, 2);
-		System.out.println(emailAddress);
 		createAccountPage.insertEmailAddress(emailAddress);
 		createAccountPage.createAnAccountButtonClick();
 		myAccountPage.getTitle();
@@ -30,35 +32,38 @@ public class CreateAccountTest extends BaseTest {
 		myAccountPage.insertLastName(lastName);
 		String password=String.valueOf(citacIzExcela.getIntegerData("MyAccountTest", 11, 2));
 		myAccountPage.insertPassword(password);
-		myAccountPage.selectDateOfBirth(SelectDateOfBirth);
-		String dateOfBirthDropDownMenuClick=citacIzExcela.getStringData("MyAccountTest", 12, 2);
-		myAccountPage.SelectDateOfBirth();
-		myAccountPage.getMonthOfBirthDropDownMenu(dateOfBirthDropDownMenuClick);
-		String monthOfBirthDropDownMenu=citacIzExcela.getStringData("MyAccountTest", 13, 2);
-		myAccountPage.selectMonthOfBirth(monthOfBirthDropDownMenu);
-		myAccountPage.getYearOfBirthDropDownMenu(0);
-		String dateOfYearDropDownMenu=citacIzExcela.getStringData("MyAccountTest", 14, 2);
-		myAccountPage.selectYearOfBirth(dateOfYearDropDownMenu);
+		myAccountPage.DateOfBirthClick();
+		String dateOFBirth=String.valueOf(citacIzExcela.getIntegerData("MyAccountTest", 12, 2));
+		myAccountPage.insertDateOfBirth(dateOFBirth);
+		String monthOfBirth=citacIzExcela.getStringData("MyAccountTest", 13, 2);
+		myAccountPage.insertMonthOfBirth(monthOfBirth);
+		String yearOfBirth=String.valueOf(citacIzExcela.getIntegerData("MyAccountTest", 14, 2));
+		myAccountPage.insertYearOfBirth(yearOfBirth);
 		String firstNameYourAddress=citacIzExcela.getStringData("MyAccountTest", 15, 2);
+		myAccountPage.getFirstNameYourAddress().clear();
 		myAccountPage.insertFirstNameYourAddress(firstNameYourAddress);
 		String lastNameYourAddress=citacIzExcela.getStringData("MyAccountTest", 16, 2);
+		myAccountPage.getLastNameYourAddress().clear();
 		myAccountPage.insertLastNameYourAddress(lastNameYourAddress);
 		String address=citacIzExcela.getStringData("MyAccountTest", 17, 2);
 		myAccountPage.insertAddress(address);
 		String city=citacIzExcela.getStringData("MyAccountTest", 18, 2);
 		myAccountPage.insertCity(city);
-		myAccountPage.getStateDropDownMenu();
+		/*myAccountPage.getStateDropDownMenu();
 		String stateDropDownMenu=citacIzExcela.getStringData("MyAccountTest", 19, 2);
 		myAccountPage.insertState(stateDropDownMenu);
-		String zipPostalCode=citacIzExcela.getStringData("MyAccountTest", 20, 2);
+		String zipPostalCode=String.valueOf(citacIzExcela.getIntegerData("MyAccountTest", 20, 2));
 		myAccountPage.insertZipPostalCode(zipPostalCode);
-		String mobilePhoneNumber=citacIzExcela.getStringData("MyAccountTest", 21, 2);
-		myAccountPage.insertMobilePhoneNumber(mobilePhoneNumber);
+		String homePhoneNumber=citacIzExcela.getStringData("MyAccountTest", 21, 2);
+		myAccountPage.insertHomePhoneNumber(homePhoneNumber);
+		String AssignAnAddressAliasForFutureReference=citacIzExcela.getStringData("MyAccountTest", 22, 2);
+		myAccountPage.getAssignAnAddressAliasForFutureReference().clear();
+		myAccountPage.insertAssignAnAddressAliasForFutureReference(AssignAnAddressAliasForFutureReference);
 		myAccountPage.registerButtonClick();
-		String textForAssertion=citacIzExcela.getStringData("MyAccountTest", 24, 2);
-		String actualText = myAccountPage.textFromRegisterButton(); 
-		AssertJUnit.assertEquals(actualText, textForAssertion);
-}
+		String textForAssertion=citacIzExcela.getStringData("MyAccountTest", 25, 2);
+		String actualText = myAccountPage.textMessage(); 
+		AssertJUnit.assertEquals(actualText, textForAssertion);*/
+	}
 	
 	@AfterMethod
 	public void nakonSvakogTesta() throws InterruptedException {

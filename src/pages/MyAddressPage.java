@@ -27,12 +27,16 @@ public class MyAddressPage {
 	 
 	 
 	public WebElement getAddANewAddressButton() {
-		return driver.findElement(By.id("center_column"));
+		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/div[1]/ul/li[1]/a"));
+		
+		
 	}
 	public WebElement getDeleteButton() {
-		return driver.findElement(By.id("center_column"));
+		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[1]/div/div/ul/li[9]/a[2]"));
 	}
-	
+	public WebElement getTextAfterDelete() {
+		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/p[2]"));
+	}
 	
 	public WebElement getOkButton() {
 		return driver.findElement(By.id(""));
@@ -52,8 +56,10 @@ public class MyAddressPage {
 	}
 	public String textFromDeleteButton() {
 		return this.getDeleteButton().getText();
-
 }
+	public String textAfterDelete() {
+		return this.getTextAfterDelete().getText();
+	}
 	
 	
 }

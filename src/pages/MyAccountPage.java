@@ -13,11 +13,11 @@ public class MyAccountPage {
 		WebElement firstName;
 		WebElement lastName;
 		WebElement password;
-		WebElement dateOfBirthDropDownMenu;
+		WebElement dateOfBirth;
 		Select SelectDateOfBirth;
-		WebElement monthOfBirthDropDownMenu;
+		WebElement monthOfBirth;
 		Select SelectMonthOfBirth;
-		WebElement yearOfBirthDropDownMenu;
+		WebElement yearOfBirth;
 		Select SelectYearOfBirth;
 		WebElement firstNameYourAddress;
 		WebElement lastNameYourAddress;
@@ -26,9 +26,10 @@ public class MyAccountPage {
 		Select SelectState;
 		WebElement stateDropDownMenu;
 		WebElement zipPostalCode;
-		WebElement mobilePhoneNumber;
+		WebElement homePhoneNumber;
 		WebElement AddressTitle;
 		WebElement RegisterButton;
+		WebElement AssignAnAddressAliasForFutureReference;
 		
 		public MyAccountPage(WebDriver driver) {
 			super();
@@ -45,49 +46,27 @@ public class MyAccountPage {
 		public WebElement getLastName() {
 			return driver.findElement(By.id("customer_lastname"));
 		}
-
 		public WebElement getPassword() {
 			return driver.findElement(By.id("passwd"));
 		}
-		
-		public Select SelectDateOfBirth() {
-			SelectDateOfBirth= new Select (driver.findElement(By.id("days")));
-			return SelectDateOfBirth;
-		}
-		public Select getSelectMonthOfBirth() {
-			SelectMonthOfBirth= new Select (driver.findElement(By.id("months")));
-			return SelectMonthOfBirth;
-		}
-		public Select getSelectYearOfBirth() {
-			SelectYearOfBirth= new Select (driver.findElement(By.id("years")));
-			return SelectYearOfBirth;
-		}
-		
-
-		public WebElement getDateOfBirthDropDownMenu(int SelectDateOfBirth ) {
+		public WebElement getDateOFBirth() {
 			return driver.findElement(By.id("days"));
 		}
-
-		public WebElement getMonthOfBirthDropDownMenu(String SelectMonthOfBirth) {
+		public WebElement getMonthOfBirth() {
 			return driver.findElement(By.id("months"));
 		}
-
-		public WebElement getYearOfBirthDropDownMenu(int SelectYearOfBirth) {
+		public WebElement getYearOfBirth() {
 			return driver.findElement(By.id("years"));
 		}
-
 		public WebElement getFirstNameYourAddress() {
 			return driver.findElement(By.id("firstname"));
 		}
-
 		public WebElement getLastNameYourAddress() {
 			return driver.findElement(By.id("lastname"));
 		}
-
 		public WebElement getAddress() {
-			return driver.findElement(By.id("address2"));
+			return driver.findElement(By.id("address1"));
 		}
-
 		public WebElement getCity() {
 			return driver.findElement(By.id("city"));
 		}
@@ -98,90 +77,88 @@ public class MyAccountPage {
 		public WebElement getStateDropDownMenu() {
 			return driver.findElement(By.id("id_state"));
 		}
-
 		public WebElement getZipPostalCode() {
 			return driver.findElement(By.id("postcode"));
 		}
-
-
-		public WebElement getMobilePhoneNumber() {
-			return driver.findElement(By.id("phone_mobile"));
+		public WebElement getHomePhoneNumber() {
+			return driver.findElement(By.id("phone"));
 		}
-		
-		
-
-		public WebElement getAddressTitle() {
-			return driver.findElement(By.xpath("alias"));
-		}
-
 		public WebElement getRegisterButton() {
 			return driver.findElement(By.id("submitAccount"));
 		}
 		public WebElement getMessage() {
 			return driver.findElement(By.xpath("//*[@id=\"center_column\"]/p"));
 		}
+		public WebElement getAssignAnAddressAliasForFutureReference() {
+			return driver.findElement(By.id("alias"));
+		}
+
+		
+		
 		
 		public void titleClick(String title) {
 			this.getTitle().click();
 		}
 		public void insertFirstName(String firstName) {
 			this.getFirstName().sendKeys(firstName);
-
-	}
+		}
 		public void insertLastName(String lastName) {
 			this.getLastName().sendKeys(lastName);
-	}
+		}
 		public void insertPassword(String password) {
 			this.getPassword().sendKeys(password);
-	}
-		public void selectDateOfBirth(int day) {
-			this.SelectDateOfBirth().selectByIndex(day);
 		}
-		public void selectMonthOfBirth(String month) {
-			this.getSelectMonthOfBirth().selectByVisibleText(month);
+		public void DateOfBirthClick() {
+		this.getDateOFBirth().click();
+		}
+		public void insertDateOfBirth(String dateOfBirth) {
+			this.getDateOFBirth().sendKeys(dateOfBirth);
+		}
+		public void MonthOfBirth(String month) {
+			this.getMonthOfBirth().click();
+		}
+		public void insertMonthOfBirth(String monthOfBirth) {
+			this.getMonthOfBirth().sendKeys(monthOfBirth);
 		}
 		public void selectYearOfBirth(String year) {
-			this.getSelectYearOfBirth().selectByVisibleText(year);
+			this.getYearOfBirth().click();
 		}
-		
+		public void insertYearOfBirth(String yearOfBirth) {
+			this.getYearOfBirth().sendKeys(yearOfBirth);
+		}
 		public void insertFirstNameYourAddress(String firstNameYourAddress) {
 			this.getFirstNameYourAddress().sendKeys(firstNameYourAddress);
-	}
+		}
 		public void insertLastNameYourAddress(String lastNameYourAddress) {
 			this.getLastNameYourAddress().sendKeys(lastNameYourAddress);
-	}
+		}
 		public void insertAddress(String Address) {
 			this.getAddress().sendKeys(Address);
-	}
+		}
 		public void insertCity(String City) {
 			this.getCity().sendKeys(City);
-	}
+		}
 		public void StateDropDownMenuClick(String State) {
 			this.getStateDropDownMenu().click();
-			}
-		public void insertState(String State) {
-			this.getStateDropDownMenu().sendKeys();
 		}
-		
-
+		public void insertState(String State) {
+			this.getStateDropDownMenu().sendKeys(State);
+		}
 		public void insertZipPostalCode(String zipPostalCode) {
 			this.getZipPostalCode().sendKeys(zipPostalCode);
-	}
-	
-		public void insertMobilePhoneNumber(String MobilePhoneNumber) {
-			this.getMobilePhoneNumber().sendKeys(MobilePhoneNumber);
-	}
-		
-		public void insertAddressTitle() {
-			this.getAddressTitle().sendKeys();
+		}
+		public void insertHomePhoneNumber(String HomePhoneNumber) {
+			this.getHomePhoneNumber().sendKeys(HomePhoneNumber);
 		}
 		public void registerButtonClick() {
 			this.getRegisterButton().click();
 		}
-		public String textFromRegisterButton() {
-			
-			return this.getRegisterButton().getText();
-	}
+		public String textMessage() {
+			return this.getMessage().getText();
+		}
+		public void insertAssignAnAddressAliasForFutureReference(String AssignAnAddressAliasForFutureReference) {
+			this.getAssignAnAddressAliasForFutureReference().sendKeys(AssignAnAddressAliasForFutureReference);
+		}
 
 }
 
